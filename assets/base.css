@@ -2804,7 +2804,7 @@ details-disclosure > details {
 }
 
 .gradient {
-  background: #f7ffd0;
+  background: var(--color-main-background);
 
   background-attachment: fixed;
 }
