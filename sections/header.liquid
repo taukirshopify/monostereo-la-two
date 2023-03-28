@@ -146,9 +146,9 @@ color: #000;
   </symbol>
 </svg>
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} container {% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
-      <header-drawer class="d-block" >
+      <header-drawer class="d-block row"  >
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
             <span>
@@ -170,7 +170,8 @@ color: #000;
                           {{ section.settings.link_title }}</a></li>
                           <li> <a href="{{ section.settings.link02 }}"> 
                           
-                          {% include 'spectacle' %}
+                          {% include 'hanger' %}
+
                           {{ section.settings.link_title02 }}</a></li>
 
 
@@ -184,7 +185,7 @@ color: #000;
 
                           <li> <a href="{{ section.settings.link04 }}">  
                           
-                          {% include 'spectacle' %}
+                          {% include 'chair' %}
 
                           {{ section.settings.link_title04 }}</a></li>
                   
@@ -341,7 +342,7 @@ color: #000;
                   </ul>
                 </div>
               </div>
-            </div>
+            </div>.header
           </div>
         </details>
       </header-drawer>
@@ -1116,6 +1117,7 @@ color: #000;
   .header {
     padding-top: 0px;
     padding-bottom: 0px;
+    position: relative;
 }
 .header__heading-logo {
   max-width: 600px;
@@ -1127,9 +1129,17 @@ color: #000;
   text-decoration: none;
   color: #000;
   font-family: 'JMH Typewriter dry';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 20px 2px;
+  display: block;
+}
+.collection-with-icon  li:hover a{
+  color: red;
+}
+.collection-with-icon   a svg{
+  fill: currentColor;
 }
 .collection-with-icon li:first-child{
   margin-left: 32px;
@@ -1175,6 +1185,9 @@ a.header__heading-link.link.link--text.focus-inset img {
   width: 20px;
   padding: 0;
 }
+}
+.collection-with-icon {
+  border-bottom: 1px solid #ddd;
 }
   
 </style>
