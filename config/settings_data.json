@@ -3,7 +3,7 @@
     "logo": "shopify:\/\/shop_images\/redomonoheader-edit.png",
     "logo_width": 300,
     "favicon": "shopify:\/\/shop_images\/header.png",
-    "colors_main_background": "#d0ffe2",
+    "colors_main_background": "#f7ffd0",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#f8ffcb",
     "gradient_accent_1": "",
