@@ -114,6 +114,7 @@
         "66d647b6-3dbc-4354-9522-2b853a0f3320": {
           "type": "product",
           "settings": {
+            "img-02": "shopify:\/\/shop_images\/redo_items2.png",
             "proudct": "earrings-rhombus-1"
           }
         }
