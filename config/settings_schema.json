@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "8.0.1",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -39,6 +39,13 @@
       {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
+      },
+      {
+        "type": "color",
+        "id": "colors_main_background",
+        "default": "#FFFFFF",
+        "label": "Main Page Background Color",
+        "info": "The color for the entire website background"
       },
       {
         "type": "color",
