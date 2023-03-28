@@ -1,1 +1,229 @@
-{"sections":{"1f3502da-36f8-4277-8feb-8dc9957ed25f":{"type":"home-video","blocks":{"bb95b400-e481-4637-b11e-cf473e5542a2":{"type":"image","settings":{"img":"shopify:\/\/shop_images\/2redo_shop_collection.png","mainimg":"shopify:\/\/shop_images\/Rectangle_1.jpg"}},"04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d":{"type":"video","disabled":true,"settings":{"imageoverly":"shopify:\/\/shop_images\/2redo_shop_collection.png","video-url":"http:\/\/media.w3.org\/2010\/05\/sintel\/trailer.mp4"}}},"block_order":["bb95b400-e481-4637-b11e-cf473e5542a2","04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d"],"settings":{}},"featured_collection":{"type":"featured-collection","settings":{"title":"","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"collection","products_to_show":11,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":36}},"0eb45fb2-9c89-41bf-9568-b3b850a01e76":{"type":"home-video","disabled":true,"settings":{}},"b4c0372c-1eda-4af8-aca0-f91e616ee070":{"type":"featured-image","settings":{"img":"shopify:\/\/shop_images\/2stories.png","img-02":"shopify:\/\/shop_images\/2friends.png"}},"34617d71-a383-4e98-8599-8d190bb4a2cc":{"type":"collection-with-image","blocks":{"ccccab7e-c5da-43b9-b205-ce2df55c1014":{"type":"collection","settings":{"img":"shopify:\/\/shop_images\/12_150-web.webp","img-02":"shopify:\/\/shop_images\/items_to_buy1.png","collection":"FRIEND"}},"b2cf6840-9050-4925-8852-eab6aa02bb18":{"type":"collection","settings":{"img":"shopify:\/\/shop_images\/12_150-web.webp","img-02":"shopify:\/\/shop_images\/redo_items3.png","collection":"FRIEND"}},"917db72a-515c-44b5-96e2-63b0bacfa17d":{"type":"collection","settings":{"img":"shopify:\/\/shop_images\/12_150-web.webp","img-02":"shopify:\/\/shop_images\/redo_objects.png","collection":"FRIEND"}},"1d8e1048-78bf-4ba2-9b3b-40e13b13842b":{"type":"product","settings":{"img":"shopify:\/\/shop_images\/12_150-web.webp","img-02":"shopify:\/\/shop_images\/items_to_buy1_1f12b6dd-dbed-4da3-a4d1-bead17dcb95a.png","proudct":"earrings-circle-2"}},"5e21a11e-6957-4f02-aed5-1c572adaeef1":{"type":"product","settings":{"img":"shopify:\/\/shop_images\/12_150-web.webp","img-02":"shopify:\/\/shop_images\/clothing.png","proudct":"earrings-circle-2"}}},"block_order":["ccccab7e-c5da-43b9-b205-ce2df55c1014","b2cf6840-9050-4925-8852-eab6aa02bb18","917db72a-515c-44b5-96e2-63b0bacfa17d","1d8e1048-78bf-4ba2-9b3b-40e13b13842b","5e21a11e-6957-4f02-aed5-1c572adaeef1"],"settings":{"height":"500","height01":"500"}},"bfec7841-edab-495c-9fe3-df039a522372":{"type":"featued-bannar","disabled":true,"blocks":{"dc090679-c4ba-495c-8a1a-0f4a23612260":{"type":"bannar","settings":{"img":"shopify:\/\/shop_images\/Rectangle_5.jpg","h3":"FRIEND","btn":"See more","btn_link":"#"}},"5a49e351-7846-4301-ac3f-99e13e821c9e":{"type":"bannar","settings":{"img":"shopify:\/\/shop_images\/Rectangle_4.jpg","h3":"STORIES","btn":"See more","btn_link":"#"}}},"block_order":["dc090679-c4ba-495c-8a1a-0f4a23612260","5a49e351-7846-4301-ac3f-99e13e821c9e"],"settings":{}},"8dff8305-1aaa-4e5e-9b4d-e3107262d42d":{"type":"collection-catalog","disabled":true,"blocks":{"a9b237b7-d01b-4b32-8d59-c7fef158c96d":{"type":"bannar","settings":{"img":"shopify:\/\/shop_images\/Rectangle_6.jpg","h3":"","btn":"Shop Accessories","btn_link":""}},"7e8d77a3-f9d7-488a-be1a-534d2d13c176":{"type":"bannar","settings":{"img":"shopify:\/\/shop_images\/Rectangle_8.jpg","h3":"","btn":"Shop Accessories","btn_link":""}},"da364526-bbf6-4965-8f04-8bbc0bbb8392":{"type":"bannar","settings":{"img":"shopify:\/\/shop_images\/Rectangle_7.jpg","h3":"","btn":"Shop Accessories","btn_link":""}}},"block_order":["a9b237b7-d01b-4b32-8d59-c7fef158c96d","7e8d77a3-f9d7-488a-be1a-534d2d13c176","da364526-bbf6-4965-8f04-8bbc0bbb8392"],"settings":{}},"859823d1-dcb6-4223-a3db-7c899ea239ba":{"type":"featued-proudct-02","disabled":true,"settings":{"img":"shopify:\/\/shop_images\/Rectangle_9_1.jpg","proudct":"earrings-triangle","img-01":"shopify:\/\/shop_images\/Rectangle_10.jpg","proudct-01":"earrings-hdex","img-02":"shopify:\/\/shop_images\/Group_4.jpg","proudct-02":"earrings-rectangle-portrait-1"}},"2e41cc9f-9ea3-473c-b3ca-12738fac80fd":{"type":"home-contact","disabled":true,"settings":{"img":"shopify:\/\/shop_images\/Rectangle_14.png","h2":"Contact us"}}},"order":["1f3502da-36f8-4277-8feb-8dc9957ed25f","featured_collection","0eb45fb2-9c89-41bf-9568-b3b850a01e76","b4c0372c-1eda-4af8-aca0-f91e616ee070","34617d71-a383-4e98-8599-8d190bb4a2cc","bfec7841-edab-495c-9fe3-df039a522372","8dff8305-1aaa-4e5e-9b4d-e3107262d42d","859823d1-dcb6-4223-a3db-7c899ea239ba","2e41cc9f-9ea3-473c-b3ca-12738fac80fd"]}
+{
+  "sections": {
+    "1f3502da-36f8-4277-8feb-8dc9957ed25f": {
+      "type": "home-video",
+      "blocks": {
+        "bb95b400-e481-4637-b11e-cf473e5542a2": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/2redo_shop_collection.png",
+            "mainimg": "shopify:\/\/shop_images\/Rectangle_1.jpg"
+          }
+        },
+        "04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "imageoverly": "shopify:\/\/shop_images\/2redo_shop_collection.png"
+          }
+        }
+      },
+      "block_order": [
+        "bb95b400-e481-4637-b11e-cf473e5542a2",
+        "04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d"
+      ],
+      "settings": {
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "collection",
+        "products_to_show": 11,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "0eb45fb2-9c89-41bf-9568-b3b850a01e76": {
+      "type": "home-video",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "b4c0372c-1eda-4af8-aca0-f91e616ee070": {
+      "type": "featured-image",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/2stories.png",
+        "link": "",
+        "img-02": "shopify:\/\/shop_images\/2friends.png",
+        "link2": ""
+      }
+    },
+    "34617d71-a383-4e98-8599-8d190bb4a2cc": {
+      "type": "collection-with-image",
+      "blocks": {
+        "ccccab7e-c5da-43b9-b205-ce2df55c1014": {
+          "type": "collection",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/12_150-web.webp",
+            "img-02": "shopify:\/\/shop_images\/items_to_buy1.png",
+            "collection": "FRIEND"
+          }
+        },
+        "b2cf6840-9050-4925-8852-eab6aa02bb18": {
+          "type": "collection",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/12_150-web.webp",
+            "img-02": "shopify:\/\/shop_images\/redo_items3.png",
+            "collection": "FRIEND"
+          }
+        },
+        "917db72a-515c-44b5-96e2-63b0bacfa17d": {
+          "type": "collection",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/12_150-web.webp",
+            "img-02": "shopify:\/\/shop_images\/redo_objects.png",
+            "collection": "FRIEND"
+          }
+        },
+        "1d8e1048-78bf-4ba2-9b3b-40e13b13842b": {
+          "type": "product",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/12_150-web.webp",
+            "img-02": "shopify:\/\/shop_images\/items_to_buy1_1f12b6dd-dbed-4da3-a4d1-bead17dcb95a.png",
+            "proudct": "earrings-circle-2"
+          }
+        },
+        "5e21a11e-6957-4f02-aed5-1c572adaeef1": {
+          "type": "product",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/12_150-web.webp",
+            "img-02": "shopify:\/\/shop_images\/clothing.png",
+            "proudct": "earrings-circle-2"
+          }
+        }
+      },
+      "block_order": [
+        "ccccab7e-c5da-43b9-b205-ce2df55c1014",
+        "b2cf6840-9050-4925-8852-eab6aa02bb18",
+        "917db72a-515c-44b5-96e2-63b0bacfa17d",
+        "1d8e1048-78bf-4ba2-9b3b-40e13b13842b",
+        "5e21a11e-6957-4f02-aed5-1c572adaeef1"
+      ],
+      "settings": {
+        "height": "500",
+        "height01": "500"
+      }
+    },
+    "bfec7841-edab-495c-9fe3-df039a522372": {
+      "type": "featued-bannar",
+      "disabled": true,
+      "blocks": {
+        "dc090679-c4ba-495c-8a1a-0f4a23612260": {
+          "type": "bannar",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_5.jpg",
+            "h3": "FRIEND",
+            "btn": "See more",
+            "btn_link": "#"
+          }
+        },
+        "5a49e351-7846-4301-ac3f-99e13e821c9e": {
+          "type": "bannar",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_4.jpg",
+            "h3": "STORIES",
+            "btn": "See more",
+            "btn_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "dc090679-c4ba-495c-8a1a-0f4a23612260",
+        "5a49e351-7846-4301-ac3f-99e13e821c9e"
+      ],
+      "settings": {
+      }
+    },
+    "8dff8305-1aaa-4e5e-9b4d-e3107262d42d": {
+      "type": "collection-catalog",
+      "disabled": true,
+      "blocks": {
+        "a9b237b7-d01b-4b32-8d59-c7fef158c96d": {
+          "type": "bannar",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_6.jpg",
+            "h3": "",
+            "btn": "Shop Accessories",
+            "btn_link": ""
+          }
+        },
+        "7e8d77a3-f9d7-488a-be1a-534d2d13c176": {
+          "type": "bannar",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_8.jpg",
+            "h3": "",
+            "btn": "Shop Accessories",
+            "btn_link": ""
+          }
+        },
+        "da364526-bbf6-4965-8f04-8bbc0bbb8392": {
+          "type": "bannar",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_7.jpg",
+            "h3": "",
+            "btn": "Shop Accessories",
+            "btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a9b237b7-d01b-4b32-8d59-c7fef158c96d",
+        "7e8d77a3-f9d7-488a-be1a-534d2d13c176",
+        "da364526-bbf6-4965-8f04-8bbc0bbb8392"
+      ],
+      "settings": {
+      }
+    },
+    "859823d1-dcb6-4223-a3db-7c899ea239ba": {
+      "type": "featued-proudct-02",
+      "disabled": true,
+      "settings": {
+        "img": "shopify:\/\/shop_images\/Rectangle_9_1.jpg",
+        "proudct": "earrings-triangle",
+        "img-01": "shopify:\/\/shop_images\/Rectangle_10.jpg",
+        "proudct-01": "earrings-hdex",
+        "img-02": "shopify:\/\/shop_images\/Group_4.jpg",
+        "proudct-02": "earrings-rectangle-portrait-1"
+      }
+    },
+    "2e41cc9f-9ea3-473c-b3ca-12738fac80fd": {
+      "type": "home-contact",
+      "disabled": true,
+      "settings": {
+        "img": "shopify:\/\/shop_images\/Rectangle_14.png",
+        "h2": "Contact us"
+      }
+    }
+  },
+  "order": [
+    "1f3502da-36f8-4277-8feb-8dc9957ed25f",
+    "featured_collection",
+    "0eb45fb2-9c89-41bf-9568-b3b850a01e76",
+    "b4c0372c-1eda-4af8-aca0-f91e616ee070",
+    "34617d71-a383-4e98-8599-8d190bb4a2cc",
+    "bfec7841-edab-495c-9fe3-df039a522372",
+    "8dff8305-1aaa-4e5e-9b4d-e3107262d42d",
+    "859823d1-dcb6-4223-a3db-7c899ea239ba",
+    "2e41cc9f-9ea3-473c-b3ca-12738fac80fd"
+  ]
+}
