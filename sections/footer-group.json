@@ -1,1 +1,56 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"c0ed22e0-c10c-4473-8a64-c1c21cf76aee":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/header.png","image_width":550,"alignment":"center"}},"4e26310a-aeba-4762-a307-8d3f26e17743":{"type":"link_list","settings":{"heading":"","menu":"main-menu"}},"ff5e5929-6fa0-4ae7-812e-35fabd2ec7be":{"type":"text","settings":{"heading":"","subtext":"<p>Share contact information, store details, and brand content with your customers.<\/p>"}}},"block_order":["c0ed22e0-c10c-4473-8a64-c1c21cf76aee","4e26310a-aeba-4762-a307-8d3f26e17743","ff5e5929-6fa0-4ae7-812e-35fabd2ec7be"],"settings":{"color_scheme":"background-1","img":"shopify:\/\/shop_images\/footer-edit.png","newsletter_enable":false,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":false,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":false,"margin_top":20,"padding_top":24,"padding_bottom":8}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "c0ed22e0-c10c-4473-8a64-c1c21cf76aee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Monostereo-logo-only-1.png",
+            "image_width": 550,
+            "alignment": "center"
+          }
+        },
+        "4e26310a-aeba-4762-a307-8d3f26e17743": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "main-menu"
+          }
+        },
+        "ff5e5929-6fa0-4ae7-812e-35fabd2ec7be": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c0ed22e0-c10c-4473-8a64-c1c21cf76aee",
+        "4e26310a-aeba-4762-a307-8d3f26e17743",
+        "ff5e5929-6fa0-4ae7-812e-35fabd2ec7be"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "img": "shopify:\/\/shop_images\/Monostereo-logo-only-1_472febfd-51b2-48b2-8af2-1d14449d0865.png",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 20,
+        "padding_top": 24,
+        "padding_bottom": 8
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
