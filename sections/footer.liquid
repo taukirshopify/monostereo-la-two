@@ -323,10 +323,12 @@
           </ul>
         {%- endif -%}
       </div>
+      {% if section.settings.img %}
      <div class="footer-image-wrapper">
     
       <img src="{{ section.settings.img | img_url:'' }}" alt="">
     </div>
+      {% endif %}
 
     </div>
   </div>
