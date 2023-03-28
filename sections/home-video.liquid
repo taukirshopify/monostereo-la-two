@@ -1,0 +1,186 @@
+<div class="container">
+    <div class="row">
+       <div class="col-md-12">
+
+          <div class="header-image-wrappper">
+
+
+      {% for item in section.blocks %}
+        {% case item.type %}
+         
+            {% when 'video' %}  
+            <div class="mutecontoroller">
+                <div class="play" id="audio-control">
+               {% render 'unmute.liquid' %}
+               {% render 'mute.liquid' %}
+               </div>
+            </div> 
+
+            <div class="video-wrapper">
+            
+                <video id="videoBG" poster="" playsinline autoplay muted loop>
+                    <source type="video/mp4" src="{{ item.settings.video-url }}">
+                  </video>
+                  <div class="overly-fream">
+                    <img src="{{ item.settings.imageoverly | img_url:'master' }}" alt="">
+                     </div>
+            </div>
+            {% when 'image' %}
+              <div class="image-overly-wrapper">
+               <img src="{{ item.settings.img | img_url:'' }}" alt="">
+            
+              </div>
+              <div class="main-image-url">
+                <img src="{{ item.settings.mainimg | img_url:'' }}" alt="">
+              </div>
+
+            {% endcase %} 
+      {% endfor %}
+
+
+
+
+
+
+         </div>
+    
+       </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Video and Image slide",
+        "class": "videoandbannar",
+
+        "blocks": [
+            {
+                "type": "image",
+                "name": "image",
+                "settings": [
+
+                       {
+                        "type": "image_picker",
+                        "id": "img",
+                        "label": "Image Overly for video"
+                       },
+                    {
+                        "type": "image_picker",
+                        "id": "mainimg",
+                        "label": "Main image"
+                       }
+                ]
+            },
+            {
+                "type": "video",
+                "name": "video",
+                "settings": [
+   
+                    {
+                        "type": "image_picker",
+                        "id": "imageoverly",
+                        "label": "Image Overly for video"
+                       },
+                       {
+                        "type": "text",
+                        "id": "video-url",
+                        "label": "Put your video link"
+                       }
+                ]
+            }
+        ],
+        
+        "presets": [
+            {
+              "name": "Video and Image slide"
+            }
+        ]
+    }
+{% endschema %}
+
+
+<script>
+
+    $( document ).ready(function() {
+
+
+                $('#audio-control').click(function(){
+                    if( $("#videoBG").prop('muted') ) {
+                        $("#videoBG").prop('muted', false);
+                       {% comment %} $('').addClass("intro"); {% endcomment %}
+                       $(".svg-unmute").addClass('d-none');
+                       $(".svg-mute").removeClass('d-none');
+                    // or toggle class, style it with a volume icon sprite, change background-position
+                    } else {
+                    $("#videoBG").prop('muted', true);
+                    $(this).removeClass("intro");
+                   $ (".svg-unmute").removeClass('d-none');
+                    $(".svg-mute").addClass('d-none');
+                    }
+                });
+
+        });
+</script>
+
+
+
+<style>
+
+
+    {% comment %} .overly-fream img {
+        width: 100%;
+    } {% endcomment %}
+    .header-image-wrappper {
+        position: relative;
+    }
+    .image-overly-wrapper {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+
+    .image-overly-wrapper img {
+        width: 100%;
+        height: 100%;
+    }
+    .main-image-url img {
+        width: 100%;
+    }
+    {% comment %} video#videoBG {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        z-index: -1;
+    } {% endcomment %}
+    .overly-fream {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .video-wrapper {
+        display: inline-block;
+        position: relative;
+        aspect-ratio: 16/9;
+    }
+    .overly-fream   img {
+        width: 100%;
+        height: 100%;
+    }
+    .play {
+        position: absolute;
+        top: 13%;
+        right: 10%;
+        background: wheat;
+        padding: 12px;
+        z-index: 100;
+        border-radius: 50px;
+    }
+    video#videoBG {
+        width: 100%;
+    }
+</style>

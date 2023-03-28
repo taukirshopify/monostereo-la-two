@@ -1,0 +1,154 @@
+
+<section class="featued-bannar">
+<div class="container">
+ <div class="row">
+    {% for block in section.blocks %}
+        <div class="col-md-6">
+          <div class="featued-bannar-wrapper">
+            <div class="featued-bannar-img">
+               <img src="{{ block.settings.img | img_url:'' }}" alt="">
+            </div>
+            <div class="featued-bannar-content">
+              <h2>{{ block.settings.h3 }}</h2>
+              <a href="{{ block.settings.btn_link }}" class="btn">{{block.settings.btn}}</a>
+            </div>
+         </div>
+
+        </div>
+     {% endfor %}
+
+
+
+ </div>
+ </div>
+
+
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "Featued Bannar 01",
+        "class": "bannar-01",
+        "blocks": [
+            {
+                "type": "bannar",
+                "name": "Featued Bannar",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "img",
+                        "label": "Bannar image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "h3",
+                        "label": " Bannar Title"
+                    },
+                    {
+                        "type": "text",
+                        "id": "btn",
+           
+                        "label": " Bannar button title"
+                    },
+                    {
+                        "type": "url",
+                        "id": "btn_link",
+                        "label": " Bannar Button link"
+                    }
+                ]
+            }
+        ],
+        
+        "presets": [
+            {
+                "name": "Featued Bannar 01"
+            }
+        ]
+    }
+{% endschema %}
+
+
+
+<style>
+
+
+.featued-bannar img{
+ width: 100%;
+}
+
+.featued-bannar-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
+.featued-bannar-wrapper {
+    position: relative;
+    margin:1rem 0;
+}
+@media only screen and (max-width: 600px) {
+    .featued-bannar-wrapper {
+    
+        margin: 0.5rem 0;
+    }
+  }
+
+
+
+
+.featued-bannar-content a.btn {
+    padding: 10px 31px;
+    background: #AB080C;
+    color: #fff;
+    border:1px solid #AB080C;
+}
+.featued-bannar-content a.btn:hover {
+ 
+    background: transparent;
+    color: #000;
+    
+}
+.featued-bannar-content h2{
+    font-family: 'JMH Typewriter dry';
+    font-style: normal;
+    font-size: 139.542px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 1400px) and (min-width: 1040px)  {
+
+    .featued-bannar-content h2{
+    font-size: 95.542px;
+    }
+
+}
+@media only screen and (max-width: 1040px) and (min-width: 999px)  {
+
+    .featued-bannar-content h2{
+    font-size: 80.542px;
+    }
+
+}
+@media only screen and (max-width: 889px) and (min-width: 600px)  {
+
+    .featued-bannar-content h2{
+    font-size: 60.542px;
+    }
+
+}
+@media only screen and (max-width: 599px) and (min-width: 200px)  {
+
+    .featued-bannar-content h2{
+    font-size: 60.542px;
+    }
+
+}
+
+</style>

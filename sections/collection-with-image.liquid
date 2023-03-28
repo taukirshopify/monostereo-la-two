@@ -1,0 +1,204 @@
+<section class="collection-proudct-wrpper">
+
+
+<div class="container">
+    <div class="row">
+
+        {% for block in section.blocks %}  
+        {% case block.type %}
+        {% when 'collection' %}
+
+
+            <div class="col-md-4">
+                <div class="catalog-two-wrapper">
+                
+                
+              
+        
+                  <div class="coll-or-pro">
+                     <img src="{{ block.settings.img  | img_url:'' }}" alt="">
+                 </div>
+                 
+                 <div class="collection-or-proudct">
+                    <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
+                 </div>
+                   <div class="corp-title">
+                      <h4>{{ block.settings.collection }}</h4>
+                   </div>
+        
+                </div>
+        
+             </div> 
+
+             {% when 'product' %}
+
+                <div class="col-md-4">
+                    <div class="catalog-two-wrapper">
+            
+                  
+            
+                      <div class="coll-or-pro">
+                         <img src="{{ block.settings.img  | img_url:'' }}" alt="">
+                     </div>
+                     
+                     <div class="collection-or-proudct">
+                        <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
+                     </div>
+                     <div class="corp-title">
+                      <a href="{{ block.settings.proudct.url }}"> <h5>{{ block.settings.proudct.title }}</h5></a> 
+                      <a href="{{ block.settings.proudct.url }}">   <p>{{ block.settings.proudct.price | money }}</p></a>
+                     </div>
+            
+                    </div>
+            
+                 </div> 
+        {% endcase %} 
+
+
+    {% endfor %}
+
+
+
+
+    </div>
+</div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Collection / proudct ",
+        "class": "iamge-catalog",
+        "settings": [
+            {
+                "type": "text",
+                "id": "height",
+                "label": "Select height desktop",
+                "default": "500"
+            },
+            {
+                "type": "text",
+                "id": "height01",
+                "label": "Select height mobile",
+                "default": "500"
+            }
+        ],
+         "blocks": [
+            {
+                "type": "collection",
+                "name": "collection",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "img"  ,
+                        "label": "Select your big Image here"
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "img-02",
+                        "label": "Small image here"
+                      },
+                      {
+                        "type": "text",
+                        "id": "collection",
+                        "label": "Select your collection title",
+                        "default": "FRIEND"
+                      }
+                ]
+            },
+            {
+                "type": "product",
+                "name": "product",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "img"  ,
+                        "label": "Select your big Image here"
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "img-02",
+                        "label": "Small image here"
+                      },
+                      {
+                        "type": "product",
+                        "id": "proudct",
+                        "label": "Select your Product"
+                      }
+                ]
+            }
+         ],
+         
+        "presets": [
+            {
+                "name": "Collection or proudct"
+            }
+        ]
+    }
+{% endschema %}
+
+
+<style>
+.catalog-two-wrapper{
+ position: relative;
+ margin: 15px 0;
+}
+.collection-or-proudct{
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height: 100%;
+
+}
+.corp-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+
+}
+.corp-title  h4{
+
+    font-family: 'JMH Typewriter dry';
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.corp-title  h5{
+
+    font-family: 'JMH Typewriter dry';
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.corp-title  p{
+
+    font-family: 'JMH Typewriter dry';
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #000;
+}
+.corp-title a{
+text-decoration:none;
+}
+.catalog-two-wrapper img {
+    width: 100%;
+    height:{{ section.settings.height }}px;
+}
+@media only screen and (max-width: 600px) {
+    .catalog-two-wrapper img {
+        width: 100%;
+        height:{{ section.settings.height01 }}px;
+    }
+  }
+</style>

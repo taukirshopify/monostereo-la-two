@@ -1,0 +1,164 @@
+
+<section class="featued-product-2">
+    <div class="container">
+     <div class="row">
+      
+            <div class="col-md-6">
+              <div class="featued-bannar-product-wrapper">
+                <div class="featued-product-bannar-img">
+                   <img src="{{ section.settings.img | img_url:'' }}" alt="">
+                </div>
+                <div class="featued-product-bannar-content-2">
+                     <h3>  <a href="{{ section.settings.proudct.url }}" >{{ section.settings.proudct.title }}  </a></h3>
+                     <p>   <a href="{{ section.settings.proudct.url }}" >{{ section.settings.proudct.price | money }} </a></p> 
+                 
+                </div>
+             </div>
+    
+            </div>
+            <div class="col-md-6">
+              <div class="featued-bannar-product-wrapper">
+                <div class="featued-product-bannar-img">
+                   <img src="{{ section.settings.img-01 | img_url:'' }}" alt="">
+                </div>
+                <div class="featued-product-bannar-content-2">
+                     <h3>  <a href="{{ section.settings.proudct.url-01  }}" > {{ section.settings.proudct-01.title }} </a></h3>  
+                     <p> <a href="{{ section.settings.proudct.url-01  }}" > {{ section.settings.proudct-01.price | money }} </a></p> 
+                 
+                </div>
+             </div>
+              <div class="featued-bannar-product-wrapper">
+                <div class="featued-product-bannar-img">
+                   <img src="{{ section.settings.img-02 | img_url:'' }}" alt="">
+                </div>
+                <div class="featued-product-bannar-content-2">
+                    <h3>   <a href="{{ section.settings.proudct.url-02  }}" > {{ section.settings.proudct-02.title }} </a></h3> 
+                      <p> <a href="{{ section.settings.proudct.url-02  }}" >{{ section.settings.proudct-02.price | money }}  </a></p>
+                 
+                </div>
+             </div>
+        
+    
+            </div>
+         
+    
+    
+    
+     </div>
+     </div>
+    
+    
+    </section>
+    
+    
+    
+    {% schema %}
+        {
+            "name": "Featued product 2",
+            "class": "product-bannar-02",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Bannar image"
+                },
+                {
+                    "type": "product",
+                    "id": "proudct",
+                    "label": "Select your Proudct"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "img-01",
+                    "label": "Bannar image 2"
+                },
+                {
+                    "type": "product",
+                    "id": "proudct-01",
+                    "label": "Select your Proudct 02" 
+                },
+                {
+                    "type": "image_picker",
+                    "id": "img-02",
+                    "label": "Bannar image 2"
+                },
+                {
+                    "type": "product",
+                    "id": "proudct-02",
+                    "label": "Select your Proudct 03"
+                }
+            ],
+            
+            "presets": [
+                {
+                    "name": "Featued product 2"
+                }
+            ]
+        }
+    {% endschema %}
+    
+    
+    
+    <style>
+    
+    
+    .featued-product-2 img{
+     width: 100%;
+    }
+    
+    .featued-product-2 .featued-product-bannar-content-2 {
+        position: absolute;
+        left: 3%;
+        bottom: 5%;
+        color: #fff;
+        font-weight: bold;
+     
+    }
+
+    .featued-bannar-product-wrapper {
+        position: relative;
+        margin: 1rem 0;
+    } 
+    @media only screen and (max-width: 600px) {
+        .featued-bannar-product-wrapper {
+
+            margin: 0.5rem 0;
+        } 
+      }
+    
+    .featued-product-2   .featued-product-bannar-content-2 a.btn {
+        padding: 18px 31px;
+        font-family: 'JMH Typewriter dry';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        color: #000;
+        background: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(3.5px);
+      
+    }
+    .featued-product-2  .featued-product-bannar-content-2 a.btn:hover {
+      
+       
+        color: #000;
+        
+    }
+.featued-product-bannar-content-2  h3 a{
+    font-family: 'JMH Typewriter dry';
+    font-style: normal;
+    font-weight: 400;
+    color:#000;
+    text-decoration:none;
+}
+
+.featued-product-bannar-content-2  p a{
+    font-family: 'JMH Typewriter dry';
+    font-style: normal;
+    font-weight: 700;
+    color:#000;
+    margin-top:15px;
+    line-height: 1;
+    font-size:14px;
+    text-decoration:none;
+}
+    </style>
