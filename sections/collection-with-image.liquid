@@ -11,10 +11,14 @@
                 </div>
 
                 <div class="collection-or-proudct">
-                  <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
+                  <a href="{{ block.settings.url }}">
+                    <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
+                  </a>
                 </div>
                 <div class="corp-title">
-                  <h4>{{ block.settings.collection }}</h4>
+                  <a href="{{ block.settings.url }}">
+                    <h4>{{ block.settings.collection }}</h4>
+                  </a>
                 </div>
               </div>
             </div>
@@ -27,7 +31,9 @@
                 </div>
 
                 <div class="collection-or-proudct">
-                  <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
+                  <a href="{{ block.settings.proudct.url }}">
+                    <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
+                  </a>
                 </div>
                 <div class="corp-title">
                   <a href="{{ block.settings.proudct.url }}">
@@ -70,6 +76,11 @@
           "id": "collection",
           "label": "Select your collection title",
           "default": "FRIEND"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Select your product link"
         }
       ]
     },
