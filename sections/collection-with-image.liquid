@@ -17,7 +17,7 @@
                 </div>
                 <div class="corp-title">
                   <a href="{{ block.settings.collection.url }}">
-                    <h4>{{ block.settings.collection }}</h4>
+                    <h4>{{ block.settings.collection.title }}</h4>
                   </a>
                 </div>
               </div>
@@ -72,10 +72,9 @@
           "label": "Small image here"
         },
         {
-          "type": "text",
+          "type": "collection",
           "id": "collection",
-          "label": "Select your collection title",
-          "default": "FRIEND"
+          "label": "Select your collection title"
         }
       ]
     },
