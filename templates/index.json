@@ -3,6 +3,13 @@
     "1f3502da-36f8-4277-8feb-8dc9957ed25f": {
       "type": "home-video",
       "blocks": {
+        "04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d": {
+          "type": "video",
+          "settings": {
+            "imageoverly": "shopify:\/\/shop_images\/2redo_shop_collection.png",
+            "video-url": "shopify:\/\/files\/videos\/passwordpage-comp.mp4"
+          }
+        },
         "bb95b400-e481-4637-b11e-cf473e5542a2": {
           "type": "image",
           "disabled": true,
@@ -10,18 +17,11 @@
             "img": "shopify:\/\/shop_images\/2redo_shop_collection.png",
             "mainimg": "shopify:\/\/shop_images\/Rectangle_1.jpg"
           }
-        },
-        "04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d": {
-          "type": "video",
-          "settings": {
-            "imageoverly": "shopify:\/\/shop_images\/2redo_shop_collection.png",
-            "video-url": "shopify:\/\/files\/videos\/passwordpage-comp.mp4"
-          }
         }
       },
       "block_order": [
-        "bb95b400-e481-4637-b11e-cf473e5542a2",
-        "04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d"
+        "04ed4f3d-3f6a-4af6-9a71-19b6d52efc5d",
+        "bb95b400-e481-4637-b11e-cf473e5542a2"
       ],
       "settings": {
         "padding_top": 32,
