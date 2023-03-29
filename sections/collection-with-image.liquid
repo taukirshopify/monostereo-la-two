@@ -11,12 +11,12 @@
                 </div>
 
                 <div class="collection-or-proudct">
-                  <a href="{{ block.settings.url }}">
+                  <a href="{{ block.settings.collection.url }}">
                     <img src="{{ block.settings.img-02  | img_url:'' }}" alt="">
                   </a>
                 </div>
                 <div class="corp-title">
-                  <a href="{{ block.settings.url }}">
+                  <a href="{{ block.settings.collection.url }}">
                     <h4>{{ block.settings.collection }}</h4>
                   </a>
                 </div>
@@ -76,11 +76,6 @@
           "id": "collection",
           "label": "Select your collection title",
           "default": "FRIEND"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "Select your product link"
         }
       ]
     },
