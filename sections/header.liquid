@@ -162,9 +162,18 @@ color: #000;
                 <nav class="menu-drawer__navigation">
 
                     <ul class="collection-with-icon">
-              
+                         {% for i in section.blocks %}
+                            {% if i.settings.url == "/collections/clothing" %}
+                              {% include 'hanger' %}
+                            {% elsif i.settings.url == "/collections/accessories" %}
+                            {% include 'spectacle' %}
+                            {% elsif i.settings.url == "/collections/objects" %}
+                            {% include 'chair' %}
+                            {% endif %}
+                            <li> <a href="{{i.settings.url }}">{{i.settings.title }} </a> </li>
+                         {% endfor %}
                           <li> <a href="{{ section.settings.link }}"> 
-                        
+                      
                           
                           
                           {{ section.settings.link_title }}</a></li>
@@ -342,7 +351,7 @@ color: #000;
                   </ul>
                 </div>
               </div>
-            </div>.header
+            </div>
           </div>
         </details>
       </header-drawer>
@@ -1106,7 +1115,28 @@ color: #000;
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
     }
+  ],
+  "blocks": [
+    {
+      "type": "menu-item",
+      "name": "collection",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Select Collection Url"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Put you collection Name",
+          "default": "Clothing",
+          "placeholder": "Clothing"
+        }
+      ]
+    }
   ]
+  
 }
 {% endschema %}
 
