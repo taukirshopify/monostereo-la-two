@@ -81,7 +81,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/BODE_FW22ECOM_FLAT__FOLIAGEVESTBROWN_031_370x462_crop_center_2x_2118ce24-4491-4553-b096-b842fe7a43b6.jpg",
             "img-02": "shopify:\/\/shop_images\/redo_accessories.png",
-            "collection": "ACCESSORIES"
+            "col": "accessories-1"
           }
         },
         "b2cf6840-9050-4925-8852-eab6aa02bb18": {
@@ -89,7 +89,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/BODE_FW22ECOM_FLAT__FOLIAGEVESTBROWN_031_370x462_crop_center_2x_2118ce24-4491-4553-b096-b842fe7a43b6.jpg",
             "img-02": "shopify:\/\/shop_images\/redo_items3.png",
-            "collection": "OBJECTS"
+            "col": ""
           }
         },
         "917db72a-515c-44b5-96e2-63b0bacfa17d": {
@@ -97,7 +97,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/BODE_FW22ECOM_FLAT__FOLIAGEVESTBROWN_031_370x462_crop_center_2x_2118ce24-4491-4553-b096-b842fe7a43b6.jpg",
             "img-02": "shopify:\/\/shop_images\/redo_objects.png",
-            "collection": "FURNITURE"
+            "col": ""
           }
         },
         "1d8e1048-78bf-4ba2-9b3b-40e13b13842b": {
@@ -134,8 +134,6 @@
         "66d647b6-3dbc-4354-9522-2b853a0f3320"
       ],
       "settings": {
-        "height": "500",
-        "height01": "500"
       }
     },
     "bfec7841-edab-495c-9fe3-df039a522372": {
