@@ -163,14 +163,22 @@ color: #000;
 
                     <ul class="collection-with-icon">
                          {% for i in section.blocks %}
-                            {% if i.settings.url == "/collections/clothing" %}
-                              {% include 'hanger' %}
-                            {% elsif i.settings.url == "/collections/accessories" %}
-                            {% include 'spectacle' %}
-                            {% elsif i.settings.url == "/collections/objects" %}
-                            {% include 'chair' %}
-                            {% endif %}
-                            <li> <a href="{{i.settings.url }}">{{i.settings.title }} </a> </li>
+
+                            <li> <a href="{{i.settings.url }}">
+                              
+                              {% if i.settings.url == "/collections/clothing" %}
+                                {% include 'hanger' %}
+  
+                              {% elsif i.settings.url == "/collections/accessories" %}
+                              {% include 'spectacle' %}
+                              {% elsif i.settings.url == "/collections/objects" %}
+                              {% include 'chair' %}
+                              {% endif %}
+                              
+                              
+                              
+                              
+                              {{i.settings.title }} </a> </li>
                          {% endfor %}
                           <li> <a href="{{ section.settings.link }}"> 
                       
