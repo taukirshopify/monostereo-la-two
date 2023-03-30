@@ -169,7 +169,7 @@ color: #000;
                               {% if i.settings.url == "/collections/clothing" %}
                                 {% include 'hanger' %}
   
-                              {% elsif i.settings.url == "/collections/accessories" %}
+                              {% elsif i.settings.url == "/collections/accessories-1" %}
                               {% include 'spectacle' %}
                               {% elsif i.settings.url == "/collections/objects" %}
                               {% include 'chair' %}
@@ -180,31 +180,7 @@ color: #000;
                               
                               {{i.settings.title }} </a> </li>
                          {% endfor %}
-                          <li> <a href="{{ section.settings.link }}"> 
-                      
-                          
-                          
-                          {{ section.settings.link_title }}</a></li>
-                          <li> <a href="{{ section.settings.link02 }}"> 
-                          
-                          {% include 'hanger' %}
 
-                          {{ section.settings.link_title02 }}</a></li>
-
-
-                          <li> <a href="{{ section.settings.link03 }}"> 
-                          
-                          {% include 'spectacle' %}
-
-                          {{ section.settings.link_title03 }}</a></li>
-
-
-
-                          <li> <a href="{{ section.settings.link04 }}">  
-                          
-                          {% include 'chair' %}
-
-                          {{ section.settings.link_title04 }}</a></li>
                   
                     </ul>
 
