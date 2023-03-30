@@ -5,6 +5,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "5ec488df-56b7-4e10-bc25-81325d645e89": {
+          "type": "menu-item",
+          "settings": {
+            "url": "shopify:\/\/collections",
+            "title": "All"
+          }
+        },
         "7b78b7b3-9af2-42b5-a9f7-f2ff5f1ad2ba": {
           "type": "menu-item",
           "settings": {
@@ -28,6 +35,7 @@
         }
       },
       "block_order": [
+        "5ec488df-56b7-4e10-bc25-81325d645e89",
         "7b78b7b3-9af2-42b5-a9f7-f2ff5f1ad2ba",
         "64961168-2e15-4eb6-a47a-a850531fc994",
         "f061f63b-ea69-43d0-bf6c-5ec0402bfa3b"
