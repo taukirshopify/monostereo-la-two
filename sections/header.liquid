@@ -578,7 +578,8 @@ color: #000;
    
                 alt: logo_alt
               }} {% endcomment %}
-             <img src="{{  settings.logo | img_url:'' }}" alt="">
+             <img class="dektop-image" src="{{  settings.logo | img_url:'' }}" alt="">
+             <img class="mobile-image" src="{{  settings.mobilelogo | img_url:'' }}" alt="">
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
@@ -1187,7 +1188,23 @@ a.header__heading-link.link.link--text.focus-inset img {
   max-height: 24vh;
   width: 100%;
 }
+
+.mobile-image{
+  display: none;
+ }
+
+  .dektop-image{
+  display: block;
+ }
+
+      
                 @media only screen and (max-width: 600px) {
+                  .dektop-image{
+                   display: none;
+                  }
+                  .mobile-image{
+                   display: block;
+                  }
   .header__icon .icon {
     height: 15px;
     width: 20px;
