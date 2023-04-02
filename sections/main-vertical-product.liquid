@@ -966,21 +966,19 @@
      var splide = new Splide("#first-slider", {
       direction: 'ttb',
       height   : '80vh',
-      wheel    : true,
-      getEnd(): number
+      speed:2500,
+      {% comment %} wheel    : true, {% endcomment %}
+      arrows   :false,
+      focus:'center',
+      rewindSpeed: 1000000,
+      drag   : 'free',
+ 
     });
-    splide.mount();
-
-    splide.on('moved', function() {
-      // Get the index of the last slide in the current view
-      const endIndex = splide.Components.Pagination.getEnd();
+  
     
-      console.log('End index:', endIndex);
-    });
-    
-    // Get all slides in the slider
-    const slides = splide.Components.Elements.slides;
-    
+    {% comment %} // Get all slides in the slider
+    const slides = document.querySelectorAll('.splide__slide').length;
+      console.log(slides);
     // Get the height of the viewport
     const viewportHeight = window.innerHeight;
     
@@ -993,13 +991,18 @@
     // Add a scroll event listener to the window object
     window.addEventListener('scroll', function() {
       // Get the current scroll position
+     
+      
       const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    
+    console.log(scrollPosition); 
+      console.log("current");
+      console.log(threshold);
       // Calculate the position of the middle of the viewport
       const middleOfViewport = scrollPosition + (viewportHeight / 2);
     
       // Check if the middle of the viewport is above or below the threshold
       if (middleOfViewport < threshold && currentSlideIndex > 0) {
+        console.log("this is working under if section");
         // If the middle of the viewport is above the threshold and we're not at the first slide,
         // go to the previous slide
         currentSlideIndex--;
@@ -1010,11 +1013,26 @@
         currentSlideIndex++;
         splide.go(currentSlideIndex);
       }
-    });
+    }); {% endcomment %}
     
+// Get the height of the viewport
+const viewportHeight = window.innerHeight;
+
+// Listen for the scroll event
+window.addEventListener('scroll', function() {
+  // Get the distance from the top of the page to the bottom of the viewport
+  const scrollPosition = window.scrollY / 90;
+  
+  // Get the index of the slide to go to
+  const index = Math.floor(scrollPosition );
+  console.log(index);
+  // Go to the slide
+  splide.go(index);
+});
 
 
 
+    splide.mount();
 
 
       function isIE() {
@@ -2597,7 +2615,10 @@
 
   
 
+  .splide__slide {
 
+    padding: 4%;
+}
 
 
   ul#first-slider-list li img {
@@ -2605,5 +2626,27 @@
     width: 100%;
     object-fit: scale-down;
 }
+.proudct-left-wrapper {
+  display: flex;
+
+  justify-content: center; 
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  flex-direction: column;
+  transform: translateY(-130px);
+}
+
+.proudct-right-wrapper{
+
+     display: flex;
   
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50%;
+    flex-direction: column;
+    transform: translateY(-70px);
+  
+}
 </style>
