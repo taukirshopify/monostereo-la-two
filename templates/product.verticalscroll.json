@@ -44,9 +44,15 @@
         },
         "share": {
           "type": "share",
-          "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "62b97e82-c65c-4801-8ed2-ee4eb92b4a8c": {
+          "type": "popup",
+          "settings": {
+            "text": "Sizing information",
+            "page": ""
           }
         }
       },
@@ -58,7 +64,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "62b97e82-c65c-4801-8ed2-ee4eb92b4a8c"
       ],
       "settings": {
         "enable_sticky_info": true,
