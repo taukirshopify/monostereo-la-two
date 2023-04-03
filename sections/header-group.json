@@ -41,14 +41,8 @@
         "f061f63b-ea69-43d0-bf6c-5ec0402bfa3b"
       ],
       "settings": {
-        "link": "#",
-        "link_title": "See all",
-        "link02": "shopify:\/\/pages\/contact",
-        "link_title02": "Clothing",
-        "link03": "#",
-        "link_title03": "Accessories",
-        "link04": "#",
-        "link_title04": "Objects",
+        "sub4": "collection",
+        "rangew": 240,
         "color_scheme": "accent-1",
         "logo_position": "middle-center",
         "menu": "main-menu",
