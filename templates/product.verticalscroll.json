@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-vertical-product",
+      "type": "main-product",
       "blocks": {
         "vendor": {
           "type": "text",
