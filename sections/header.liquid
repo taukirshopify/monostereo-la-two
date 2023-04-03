@@ -162,23 +162,24 @@ color: #000;
                 <nav class="menu-drawer__navigation">
 
                     <ul class="collection-with-icon">
-                         {% for i in section.blocks %}
+                      {% assign footer_menu_4 = section.settings.sub4 %}
+                    {% for i in linklists[footer_menu_4].links %}
 
-                            <li> <a href="{{i.settings.url }}">
+                            <li> <a href="{{i.url }}">
                               
-                              {% if i.settings.url == "/collections/clothing" %}
+                              {% if i.url == "/collections/clothing" %}
                                 {% include 'hanger' %}
   
-                              {% elsif i.settings.url == "/collections/accessories-1" %}
+                              {% elsif i.url == "/collections/accessories-1" %}
                               {% include 'spectacle' %}
-                              {% elsif i.settings.url == "/collections/object" %}
+                              {% elsif i.url == "/collections/object" %}
                               {% include 'chair' %}
                               {% endif %}
                               
                               
                               
                               
-                              {{i.settings.title }} </a> </li>
+                              {{i.title }} </a> </li>
                          {% endfor %}
 
                   
@@ -889,44 +890,19 @@ color: #000;
   "class": "section-header",
   "settings": [
 {
-  "type": "url",
-  "id": "link",
-  "label": "Select your Url"
+  "type": "link_list",
+  "id": "sub4",
+  "label": "Select your Collection menu"
 },
 {
-  "type": "text",
-  "id": "link_title",
-  "label": "link Name"
-},
-{
-  "type": "url",
-  "id": "link02",
-  "label": "Select your Url 02"
-},
-{
-  "type": "text",
-  "id": "link_title02",
-  "label": "link Name 02"
-},
-{
-  "type": "url",
-  "id": "link03",
-  "label": "Select your Url 03"
-},
-{
-  "type": "text",
-  "id": "link_title03",
-  "label": "link Name 03"
-},
-{
-  "type": "url",
-  "id": "link04",
-  "label": "Select your Url 04"
-},
-{
-  "type": "text",
-  "id": "link_title04",
-  "label": "link Name 04 "
+  "type": "range",
+  "id": "rangew",
+  "min": 200,
+  "max": 400,
+  "step": 2,
+
+  "label": "Mobile width",
+  "default": 240
 },
     {
       "type": "select",
@@ -1188,9 +1164,9 @@ a.header__heading-link.link.link--text.focus-inset img {
   max-height: 24vh;
   width: 100%;
 }
-
+a.header__heading-link.link.link--text.focus-inset  
 .mobile-image{
-  display: none;
+    width: {{ section.settings.rangew }}px;
  }
 
   .dektop-image{
