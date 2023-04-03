@@ -172,7 +172,7 @@ color: #000;
   
                               {% elsif i.url == "/collections/accessories-1" %}
                               {% include 'spectacle' %}
-                              {% elsif i.url == "/collections/object" %}
+                              {% elsif i.url == "/collections/accessories" %}
                               {% include 'chair' %}
                               {% endif %}
                               
@@ -1164,12 +1164,10 @@ a.header__heading-link.link.link--text.focus-inset img {
   max-height: 24vh;
   width: 100%;
 }
-a.header__heading-link.link.link--text.focus-inset  
-.mobile-image{
-    width: {{ section.settings.rangew }}px;
-    display: none;
- }
 
+ .mobile-image{
+  display: none;
+}
   .dektop-image{
   display: block;
  }
@@ -1179,9 +1177,13 @@ a.header__heading-link.link.link--text.focus-inset
                   .dektop-image{
                    display: none;
                   }
-                  .mobile-image{
-                   display: block;
-                  }
+
+                  a.header__heading-link.link.link--text.focus-inset  
+.mobile-image{
+    width: {{ section.settings.rangew }}px;
+  
+    display: block;
+ }
   .header__icon .icon {
     height: 15px;
     width: 20px;
