@@ -575,11 +575,11 @@
      var splide = new Splide("#first-slider", {
       direction: 'ttb',
       height   : '80vh',
-      speed:2500,
+      speed:3500,
       {% comment %} wheel    : true, {% endcomment %}
       arrows   :false,
       focus:'center',
-      rewindSpeed: 1000000,
+
       drag   : 'free',
  
     });
@@ -643,15 +643,17 @@ function handleScroll(event) {
     document.body.classList.remove('overflow-hidden'); // Restore default scrolling behavior when last slide is reached
   }
 }
-if (window.scrollY <= 50) {
+const slength = document.querySelectorAll('.splide__slide').length;
+if (window.scrollY <= 50 && slength > 1) {
 document.body.classList.add("overflow-hidden");
 }
+
     splide.mount();
     window.addEventListener('scroll', function() {
 
       console.log(window.scrollY);
       var body = document.querySelector('body');
-      if (window.scrollY === 0) {
+      if (window.scrollY === 0 && slength > 1) {
         body.classList.add('overflow-hidden');
       }
     });
