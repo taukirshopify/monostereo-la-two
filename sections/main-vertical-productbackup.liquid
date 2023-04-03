@@ -583,78 +583,89 @@
       drag   : 'free',
  
     });
-    {% comment %} window.addEventListener('wheel', handleScroll);
+  
+    
+    {% comment %} // Get all slides in the slider
+    const slides = document.querySelectorAll('.splide__slide').length;
+      console.log(slides);
+    // Get the height of the viewport
+    const viewportHeight = window.innerHeight;
+    
+    // Calculate the threshold for switching to the next or previous slide
+    const threshold = viewportHeight * 0.5;
+    
+    // Keep track of the current slide index
+    let currentSlideIndex = 0;
+    
+    // Add a scroll event listener to the window object
+    window.addEventListener('scroll', function() {
+      // Get the current scroll position
+     
+      
+      const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    console.log(scrollPosition); 
+      console.log("current");
+      console.log(threshold);
+      // Calculate the position of the middle of the viewport
+      const middleOfViewport = scrollPosition + (viewportHeight / 2);
+    
+      // Check if the middle of the viewport is above or below the threshold
+      if (middleOfViewport < threshold && currentSlideIndex > 0) {
+        console.log("this is working under if section");
+        // If the middle of the viewport is above the threshold and we're not at the first slide,
+        // go to the previous slide
+        currentSlideIndex--;
+        splide.go(currentSlideIndex);
+      } else if (middleOfViewport > (viewportHeight - threshold) && currentSlideIndex < (slides.length - 1)) {
+        // If the middle of the viewport is below the threshold and we're not at the last slide,
+        // go to the next slide
+        currentSlideIndex++;
+        splide.go(currentSlideIndex);
+      }
+    }); {% endcomment %}
+    
+// Get the height of the viewport
+const viewportHeight = window.innerHeight;
 
-    // Define scroll event handler
-    function handleScroll(event) {
-      // Check if the target of the event is inside the Splide JS wrapper
-      const target = event.target;
-      const wrapper = document.querySelector('.new-product-wrapper');
-      if (!wrapper.contains(target)) {
-        return;
-      }
-    
-      event.preventDefault(); // Prevent default browser scrolling behavior
-      const direction = event.deltaY > 0 ? 'next' : 'prev'; // Calculate scroll direction
-      const index = splide.index + (direction === 'next' ? 1 : -1); // Calculate next slide index
-      splide.go(index); // Move slider to next slide
-      if (index === splide.length - 1) {
-        document.body.style.overflow = 'auto'; // Restore default scrolling behavior when last slide is reached
-      }
-    }
-    
-    // Add event listener to Splide JS slider
-    const splideElement = document.querySelector('.splide');
-    splideElement.addEventListener('splide:move', handleMove);
-    
-    // Define move event handler
-    function handleMove(event) {
-      // Check if the last slide is visible
-      const index = event.detail.to;
-      if (index === splide.length - 1) {
-        window.removeEventListener('wheel', handleScroll); // Disable scroll effect when last slide is reached
-      } else {
-        window.addEventListener('wheel', handleScroll); // Enable scroll effect when not on last slide
-      }
-    } {% endcomment %}
-// Add event listener to document for scrolling
-// Add main event listener to document.body
-document.body.addEventListener('wheel', handleScroll);
+// Listen for the scroll event
+{% comment %} window.addEventListener('scroll', function(e) {
 
-// Add separate event listener to detect when user scrolls back to the wrapper
-const wrapper = document.querySelector('.new-product-wrapper');
-wrapper.addEventListener('mouseenter', () => {
-  document.body.addEventListener('wheel', handleScroll);
-});
+  e.preventDefault()
+  // Get the distance from the top of the page to the bottom of the viewport
+  const scrollPosition = window.scrollY / 90;
+  
+  // Get the index of the slide to go to
+  const index = Math.floor(scrollPosition );
+  console.log(index);
+  // Go to the slide
+  splide.go(index);
+}); {% endcomment %}
+  {% comment %} new added code {% endcomment %}
+// Add event listener to wrapper div
+ const wrapper = document.querySelector('body');
+wrapper.addEventListener('wheel', handleScroll);
 
 // Define scroll event handler
 function handleScroll(event) {
-  // Check if the target of the event is inside the Splide JS wrapper
-  const target = event.target;
-  if (!wrapper.contains(target)) {
-    return;
-  }
-
+  {% comment %} document.body.classList.add("overflow-hidden"); {% endcomment %}
   event.preventDefault(); // Prevent default browser scrolling behavior
   const direction = event.deltaY > 0 ? 'next' : 'prev'; // Calculate scroll direction
   const index = splide.index + (direction === 'next' ? 1 : -1); // Calculate next slide index
   splide.go(index); // Move slider to next slide
   if (index === splide.length - 1) {
-    document.body.classList.remove('overflow-hidden'); // Restore default scrolling behavior when last slide is reached
+    
+    document.body.classList.remove("overflow-hidden"); // Restore default scrolling behavior when last slide is reached
   }
-}
-if (window.scrollY <= 50) {
-document.body.classList.add("overflow-hidden");
+} 
+
+const wrapperinner = document.querySelector('.new-product-wrapper');
+wrapperinner.addEventListener('wheel', handleScrollinner);
+
+function handleScrollinner(event) {
+  document.body.classList.add("overflow-hidden");
 }
     splide.mount();
-    window.addEventListener('scroll', function() {
 
-      console.log(window.scrollY);
-      var body = document.querySelector('body');
-      if (window.scrollY === 0) {
-        body.classList.add('overflow-hidden');
-      }
-    });
 
       function isIE() {
         const ua = window.navigator.userAgent;
