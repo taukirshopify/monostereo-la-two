@@ -142,15 +142,15 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
-            {% assign product_grid__class = 'grid-less' %}
+            {% assign product_grid__class = '' %}
             {% if collection.products_count > 6 %}
-              {% assign product_grid__class = grid-6 %}
+              {% assign product_grid__class = 'grid-equal' %}
             {% endif %}
             <ul
               id="product-grid"
               data-id="{{ section.id }}"
               class="
-                grid product-grid">
+                grid product-grid {{ product_grid__class }}">
               {%- for product in collection.products -%}
                 {%- liquid
                   assign ratio = 1
