@@ -434,6 +434,10 @@
   color: rgb(var(--color-foreground));
 }
 
+.product-card:hover .card-information > .price{
+  color: #0a58ca;
+}
+
 .card--horizontal .card-information > .price {
   color: rgba(var(--color-foreground), 0.75);
 }
