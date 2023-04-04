@@ -1,10 +1,13 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 0.48fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-content: space-between;
+}
+
+.product-grid:has(.grid-equal){
+  grid-template-rows: repeat(6, 0.48fr);
 }
 
 .product-grid .grid__item{
