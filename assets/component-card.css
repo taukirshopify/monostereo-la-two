@@ -528,7 +528,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-45deg) translate(90%,170%);
+  transform: rotate(-45deg) translate(120%,360%);
 }
 
 .product-card.hexagon .card-content__bottom{
