@@ -215,8 +215,8 @@
 
                   {%- liquid
                     assign ratio = 1
-                    assign layout = product.metafields.custom.product_shape | handleize
-                    assign alignment = product.metafields.custom.alignment | handleize
+                    assign layout = item.metafields.custom.product_shape | handleize
+                    assign alignment = item.metafields.custom.alignment | handleize
                   -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
