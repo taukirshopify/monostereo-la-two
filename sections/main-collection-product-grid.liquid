@@ -142,7 +142,10 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
-            {{ collection.products.count }}
+            {% assign product_grid__class = 'grid-less' %}
+            {% if collection.products_count > 6 %}
+              {% assign product_grid__class = grid-6 %}
+            {% endif %}
             <ul
               id="product-grid"
               data-id="{{ section.id }}"
