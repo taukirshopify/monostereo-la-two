@@ -46,14 +46,14 @@
       when 'rectangle-portrait'
         assign ratio = 0.5
       when 'rectangle-landscape'
-         assign ratio = 2.5
+         if template contains 'search'
+          assign ratio = 2.5
+         else
+          assign ratio = 1.4
+         endif
       else
         assign ratio = 1
     endcase
-
-     if template contains 'search'
-      assign ratio = 1
-     endif
   -%}
   <div class="product-card card-wrapper product-card-wrapper underline-links-hover-none {{ layout }} {{ alignment }}">
     <div
