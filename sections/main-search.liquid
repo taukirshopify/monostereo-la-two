@@ -223,7 +223,7 @@
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                   <li class="grid__item product-item__{{ forloop.index }} {{ layout }}">
+                   <li class="grid__item {{ layout }}">
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
