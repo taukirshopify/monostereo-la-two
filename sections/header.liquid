@@ -1113,8 +1113,8 @@ color: #000;
 .header__heading-logo {
   max-width: 600px;
 }
-.collection-with-icon{
-
+.collection-with-icon li{
+  list-style-type: none;
 }
 .collection-with-icon  li a {
   text-decoration: none;
@@ -1132,9 +1132,9 @@ color: #000;
 .collection-with-icon   a svg{
   fill: currentColor;
 }
-.collection-with-icon li:first-child{
+{% comment %} .collection-with-icon li:first-child{
   margin-left: 32px;
-}
+} {% endcomment %}
 
 .header  .field__input, .customer .field input {
   background: transparent;

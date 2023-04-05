@@ -1,7 +1,4 @@
 
-  {{ 'splide.min.css' | asset_url | stylesheet_tag }}
-  <script src="{{ 'splide.min.js' | asset_url }}" ></script>
-
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
@@ -30,7 +27,7 @@
     }
   {%- endstyle -%}
 
-  
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
@@ -102,42 +99,12 @@
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
 
-  <section class="splide" id="first-slider" aria-label="Splide Basic HTML Example">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide">Slide 01</li>
-        <li class="splide__slide">Slide 02</li>
-        <li class="splide__slide">Slide 03</li>
-      </ul>
-    </div>
-  </section>
 
-  <style>
-    section {
-      margin: 2rem;
-    }
-    
-    .splide__slide {
-      background-color: tomato;
-      padding: 6rem 2rem;
-      text-align: center;
-      font-size: 2rem;
-    }
-    
-    #second-slider .splide__slide {
-      background-color: BlueViolet;
-    }
-    
-  </style>
-
-  <script>
-    new Splide("#first-slider").mount();
-  </script>
 <div class="new-product-wrapper">
 <div class="container">
 <div class="row">
   
- <div class="col-md-3">
+ <div class="col-md-3 ">
   <div class="proudct-left-wrapper">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -419,36 +386,37 @@
   </div>
 </div>
 {% comment %} end  {% endcomment %}
-<div class="col-md-6">
+<div class="col-md-4 offset-lg-1">
    <div class="proudct-mdeia-wrapper">
     <!-- First slider codes -->
-<section class="splide" id="first-slider" aria-label="Splide Basic HTML Example">
-  <div class="splide__track">
-    <ul class="splide__list">
-      {%- for media in product.media -%}
-      <li class="splide__slide">
-      
-        {{ media.preview_image | image_url: width: 1946 | image_tag:
-          loading: lazy,
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-        }}
-     </li>
+  <!-- Swiper -->
+  <div class="swiper-container">
+          
+    <div class="swiper-wrapper">
  
-    {%- endfor -%}
-    </ul>
-     
+      {%- for media in product.media -%}
+        <div class="swiper-slide"> 
+        
+          {{ media.preview_image | image_url: width: 1946 | image_tag:
+            loading: lazy,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+          }}
+        </div>
    
-  </div>
-  {% comment %} {% render 'product-vertical-media-gallery', variant_images: variant_images %} {% endcomment %}
-</section>
+      {%- endfor -%}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+    {% comment %} end  {% endcomment %}
 
    
   </div>
 </div>
 {% comment %} end  {% endcomment %}
  
-<div class="col-md-3">
+<div class="col-md-3 offset-lg-1">
 
   <div class="proudct-right-wrapper">
   
@@ -559,94 +527,27 @@
 </div>
 
   <script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+   
+      mousewheel: true,
+      slidesPerView: 'auto',
+      freeMode: true,
+      slidesPerView: 1,
+      mousewheelControl: true,
+      watchSlidesProgress: true,
+      mousewheel: {
+        releaseOnEdges: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      freeMode: true,
+    
+    });
     document.addEventListener('DOMContentLoaded', function () {
-      {% comment %} const splide =  new Splide("#first-slider", {
-        direction: 'ttb',
-        height   : '80vh',
-        wheel    : true,
-        onEnd: function() {
-          // Wait for the slider to be fully initialized and mounted
-   
-        }
 
-      }); {% endcomment %}
-   
-      {% comment %} one slide  {% endcomment %}
-    
- {% comment %} splide.on('moved', (splide) => {
-        console.log("this is called");
-   
-          const sliderHeight = splide.Components.Elements.track.clientHeight;
-          const sliderOffsetTop = splide.Components.Elements.track.offsetTop;
-          const lastSlideOffsetTop = splide.Components.Elements.slides[splide.Components.Elements.slides.length - 1].offsetTop;
-    
-          // check if the last slide is in the middle of the viewport
-          if (lastSlideOffsetTop + sliderOffsetTop + sliderHeight <= middleOfViewport) {
-            // scroll to the next section or website viewport
-            // replace this with your own code to determine the next section or website viewport to scroll to
-            window.scrollTo({
-              top: windowHeight,
-              behavior: 'smooth'
-            });
-          }
- 
-      }); 
-
-      splide.mount(); {% endcomment %}
-
-
-
-     {% comment %} other slide  {% endcomment %}
-
-
-  {% comment %} const splide =  new Splide("#first-slider", {
-        direction: 'ttb',
-        height   : '80vh',
-        wheel    : true,
-        onEnd: function() {
-        
-   
-        }
-
-      }).mount();  {% endcomment %}
-
-    
-{% comment %} 
-const wrapper = document.querySelector('.new-product-wrapper');
-wrapper.addEventListener('mouseenter', () => {
-  document.body.addEventListener('wheel', handleScroll);
-});
-
-// Define scroll event handler
-function handleScroll(event) {
-  // Check if the target of the event is inside the Splide JS wrapper
-  const target = event.target;
-  if (!wrapper.contains(target)) {
-    return;
-  }
-
-  event.preventDefault(); // Prevent default browser scrolling behavior
-  const direction = event.deltaY > 0 ? 'next' : 'prev'; // Calculate scroll direction
-  const index = splide.index + (direction === 'next' ? 1 : -1); // Calculate next slide index
-  splide.go(index); // Move slider to next slide
-  if (index === splide.length - 1) {
-    document.body.classList.remove('overflow-hidden'); // Restore default scrolling behavior when last slide is reached
-  }
-}
-const slength = document.querySelectorAll('.splide__slide').length;
-if (window.scrollY <= 50 && slength > 1) {
-document.body.classList.add("overflow-hidden");
-}
-
- 
-    window.addEventListener('scroll', function() {
-
-      console.log(window.scrollY);
-      var body = document.querySelector('body');
-      if (window.scrollY === 0 && slength > 1) {
-        body.classList.add('overflow-hidden');
-      }
-    }); {% endcomment %}
+      
 
       function isIE() {
         const ua = window.navigator.userAgent;
@@ -2224,45 +2125,45 @@ document.body.classList.add("overflow-hidden");
 {% endschema %}
 
 <style>
-
-
-  .stop-scrolling {
-    height: 100%;
-    overflow: hidden;
+  .swiper-container {
+    height: 60vh;
+    position: relative;
+    z-index: 1000;
+background: var(--color-main-background);
+}
+ .swiper-slide {
+	 color: #fff;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 35px;
+   overflow:hidden;
+   margin-bottom:15px;
 }
 
-  .splide__slide {
-
-    padding: 4%;
+ .swiper-pagination-bullet-active {
+	 background: #fff;
 }
-
-
-  ul#first-slider-list li img {
-    height: 100%;
-    width: 100%;
-    object-fit: scale-down;
+.proudct-mdeia-wrapper {
+  overflow: hidden;
 }
-.proudct-left-wrapper {
-  display: flex;
-
-  justify-content: center; 
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50%;
-  flex-direction: column;
-  transform: translateY(-130px);
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
-
-.proudct-right-wrapper{
-
-     display: flex;
-  
-    justify-content: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 50%;
-    flex-direction: column;
-    transform: translateY(-70px);
-  
+.swiper-pagination {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.swiper-pagination-bullet {
+  background: #fff;
+  width: 7px;
+  height: 7px;
+  z-index: 1000;
+  background: red;
+  display: block;
+  margin: 5px;
 }
 </style>
