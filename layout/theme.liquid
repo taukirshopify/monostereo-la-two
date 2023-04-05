@@ -254,6 +254,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {{ 'splide.min.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'splide.js' | asset_url }}"></script>
   </head>
 
   <body class="gradient ">
