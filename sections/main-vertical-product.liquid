@@ -100,7 +100,7 @@
   {%- endif -%}
 
 
-<div class="new-product-wrapper">
+<div class="new-product-wrapper" id="myDiv" onscroll="handleScroll()">
 <div class="container">
 <div class="row">
   
@@ -525,7 +525,10 @@
 
 
 </div>
+ <a href="#" class="btn scroll-to-section-button">Take to top</a>
 
+ <br>
+ <button onclick="myFunction(this)" class="theme-will-be">Click me to scroll</button>
 <style>
 .proudct-left-wrapper{
  position: absolute;
@@ -533,9 +536,28 @@
 .proudct-right-wrapper{
   position: absolute;
  }
-
+ button.theme-will-be {
+  position: fixed;
+  z-index: 1000;
+}
 </style>
   <script>
+
+
+
+
+
+
+    function myFunction(e) {
+
+    
+      window.scrollBy(100, 100);
+      alert("pageXOffset: " + window.pageXOffset + ", pageYOffset: " + window.pageYOffset);
+
+
+      console.log(window.pageYOffset);
+    }
+
     var swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
    
@@ -545,6 +567,7 @@
       slidesPerView: 1,
       mousewheelControl: true,
       watchSlidesProgress: true,
+      disableOnInteraction: true, // Disable swiper on user interaction
       mousewheel: {
         releaseOnEdges: true,
       },
@@ -554,8 +577,63 @@
       freeMode: true,
     
     });
-    document.addEventListener('DOMContentLoaded', function () {
 
+
+const section = document.querySelector('.new-product-wrapper');
+const myDiv = document.getElementById('myDiv');
+
+myDiv.addEventListener('scroll', function() {
+  // Do something when the div is scrolled
+  console.log('Div scrolled!');
+});
+
+
+
+// Get the top position of the section element
+const sectionTop = section.offsetTop;
+
+console.log(sectionTop);
+    document.addEventListener('DOMContentLoaded', function (e) {
+      e.preventDefault();
+      const button = document.querySelector('.scroll-to-section-button');
+      button.addEventListener('click', function() {
+       // Get the section element that was selected
+const section = document.querySelector('.new-product-wrapper');
+
+// Get the top position of the section element
+const sectionTop = section.offsetTop;
+
+// Set the scroll position of the webpage to the top of the section
+window.scrollTo({
+  top: sectionTop,
+  behavior: 'smooth'
+});
+      });
+
+
+
+
+
+
+
+      function handleScroll() {
+        // Get the div element
+        const divElement = document.getElementById("myDiv");
+        
+        // Get the current scroll position
+        const scrollTop = divElement.scrollTop;
+        
+        // Get the total height of the scrollable content
+        const scrollHeight = divElement.scrollHeight;
+        
+        // Get the visible height of the div element
+        const visibleHeight = divElement.offsetHeight;
+        
+        // Check if the user has scrolled to the bottom
+        if (scrollTop + visibleHeight === scrollHeight) {
+          console.log("User has reached the bottom");
+        }
+      }
       
 
       function isIE() {
