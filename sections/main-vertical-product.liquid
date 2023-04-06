@@ -100,7 +100,7 @@
   {%- endif -%}
 
 
-<div class="new-product-wrapper" id="myDiv" onscroll="handleScroll()">
+<div class="new-product-wrapper" id="myDiv" onscroll="handleScroll()" tyle="height: 100vh; overflow-y: scroll;">
 <div class="container">
 <div class="row">
   
@@ -400,7 +400,7 @@
           {{ media.preview_image | image_url: width: 1946 | image_tag:
             loading: lazy,
             sizes: sizes,
-            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+            widths: '200, 300, 350 '
           }}
         </div>
    
@@ -525,10 +525,7 @@
 
 
 </div>
- <a href="#" class="btn scroll-to-section-button">Take to top</a>
 
- <br>
- <button onclick="myFunction(this)" class="theme-will-be">Click me to scroll</button>
 <style>
 .proudct-left-wrapper{
  position: absolute;
@@ -545,20 +542,12 @@
 
 
 
+    document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    function myFunction(e) {
 
-    
-      window.scrollBy(100, 100);
-      alert("pageXOffset: " + window.pageXOffset + ", pageYOffset: " + window.pageYOffset);
-
-
-      console.log(window.pageYOffset);
-    }
-
-    var swiper = new Swiper('.swiper-container', {
+    const mySwiper = new Swiper('.swiper-container', {
       direction: 'vertical',
    
       mousewheel: true,
@@ -573,68 +562,32 @@
       },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       freeMode: true,
     
     });
 
 
-const section = document.querySelector('.new-product-wrapper');
-const myDiv = document.getElementById('myDiv');
-
-myDiv.addEventListener('scroll', function() {
-  // Do something when the div is scrolled
-  console.log('Div scrolled!');
-});
 
 
 
-// Get the top position of the section element
-const sectionTop = section.offsetTop;
+      window.addEventListener('scroll',(event) => {
+        console.log('Scrolling...');
 
-console.log(sectionTop);
-    document.addEventListener('DOMContentLoaded', function (e) {
-      e.preventDefault();
-      const button = document.querySelector('.scroll-to-section-button');
-      button.addEventListener('click', function() {
-       // Get the section element that was selected
-const section = document.querySelector('.new-product-wrapper');
-
-// Get the top position of the section element
-const sectionTop = section.offsetTop;
-
-// Set the scroll position of the webpage to the top of the section
-window.scrollTo({
-  top: sectionTop,
-  behavior: 'smooth'
-});
-      });
-
-
-
-
-
-
-
-      function handleScroll() {
-        // Get the div element
-        const divElement = document.getElementById("myDiv");
+        if (window.pageYOffset == 0) {
+         
+          mySwiper.mousewheel.enable();
+         
+          console.log('tue statement');
+        } else {
         
-        // Get the current scroll position
-        const scrollTop = divElement.scrollTop;
-        
-        // Get the total height of the scrollable content
-        const scrollHeight = divElement.scrollHeight;
-        
-        // Get the visible height of the div element
-        const visibleHeight = divElement.offsetHeight;
-        
-        // Check if the user has scrolled to the bottom
-        if (scrollTop + visibleHeight === scrollHeight) {
-          console.log("User has reached the bottom");
+          mySwiper.mousewheel.disable();
+         
+          console.log('fasle statement');
+          
         }
-      }
-      
+    });
 
       function isIE() {
         const ua = window.navigator.userAgent;
@@ -647,7 +600,6 @@ window.scrollTo({
       if (!isIE()) return;
       const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
       const noScriptInputWrapper = document.createElement('div');
-      const variantSwitcher =
         document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
         document.querySelector('variant-selects[data-section="{{ section.id }}"]');
       noScriptInputWrapper.innerHTML = document.querySelector(
@@ -2225,7 +2177,7 @@ background: var(--color-main-background);
 	 justify-content: center;
 	 font-size: 35px;
    overflow:hidden;
-   margin-bottom:15px;
+
 }
 
  .swiper-pagination-bullet-active {
@@ -2236,8 +2188,8 @@ background: var(--color-main-background);
 }
 img {
   width: 400px;
-  object-fit: cover;
-  height: 100%;
+  display: inline-block;
+  height: auto;
 }
 .swiper-pagination {
   position: absolute;
@@ -2245,13 +2197,29 @@ img {
   right: 0;
 }
 .swiper-pagination-bullet {
-    background: #fff;
-    width: 7px;
-    height: 7px;
-    z-index: 1000;
-    background: red;
-    display: block;
-    margin: 5px;
+
+  width: 10px;
+  height: 10px;
+  z-index: 1000;
+  background: red;
+  display: block;
+  margin: 5px;
+  border: 1px solid transparent;
+  border-radius: 43px;
+}
+.swiper-pagination-bullet-active:before{
+  content:'';
+  width: 8px;
+  left:50%;
+  right: 0;
+  top:50%;
+  bottom:0;
+  height: 8px;
+  z-index: 1001;
+  background: white;
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 43px;
 }
 .proudct-left-wrapper {
   position: absolute;
