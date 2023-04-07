@@ -549,7 +549,7 @@
 
     const mySwiper = new Swiper('.swiper-container', {
       direction: 'vertical',
-   
+      spaceBetween: 15,
       mousewheel: true,
       slidesPerView: 'auto',
       freeMode: true,
@@ -2221,21 +2221,19 @@ img {
   background: red;
   display: block;
   margin: 5px;
-  border: 1px solid transparent;
+  border: 1px solid red;
   border-radius: 43px;
 }
-.swiper-pagination-bullet-active:before{
-  content:'';
-  width: 10px;
-  left:50%;
-  right: 0;
-  top:50%;
-  bottom:0;
-  height: 10px;
+.swiper-pagination-bullet-active:before {
+  content: '';
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
   z-index: 1001;
-  background: white;
+  background: transparent;
   display: block;
-  border: 2px solid transparent;
+  border: 2px solid white;
   border-radius: 43px;
 }
 .proudct-left-wrapper {
