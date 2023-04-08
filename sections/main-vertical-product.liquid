@@ -104,7 +104,7 @@
 <div class="container">
 <div class="row">
   
- <div class="col-md-12 position-relative">
+ <div class="col-md-12 position-relativ">
   <div class="proudct-left-wrapper mobile-none">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -968,6 +968,10 @@
 
 <style>
 
+  .position-relativ {
+    position: relative!important;
+    z-index: 1;
+}
   .splide__slide img {
     vertical-align: bottom;
     object-fit: contain;
@@ -2696,7 +2700,7 @@ margin-top:45px;
   .swiper-container {
     height: 60vh;
     position: relative;
-    z-index: 1000;
+
 background: var(--color-main-background);
 }
 
@@ -2713,7 +2717,7 @@ background: var(--color-main-background);
 
 
 
-@media only screen and (max-width: 1440px) and (min-width: 1020px)  {
+@media only screen and (max-width: 1440px) and (min-width: 1030px)  {
 
   .new-product-wrapper {
     height: 100vh;
@@ -2777,14 +2781,14 @@ background: var(--color-main-background);
 }
 .proudct-left-wrapper {
   position: absolute;
-  z-index: 9998;
+  z-index: 100;
   top: 0;
   left: 5px;
   width: 300px;
 }
 .proudct-right-wrapper {
   position: absolute;
-  z-index: 9998;
+  z-index: 1;
   top: 50%;
   right: 5px;
   margin-top: -50px;
@@ -2792,7 +2796,7 @@ background: var(--color-main-background);
 }
 
 
-@media only screen and (max-width: 1020px){
+@media only screen and (max-width: 1030px){
   .mobile-none{
    display:none;
  }
