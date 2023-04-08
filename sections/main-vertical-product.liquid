@@ -1,7 +1,7 @@
 
 <section
   id="MainProduct-{{ section.id }}"
-  class="page-width section-{{ section.id }}-padding"
+  class=""
   data-section="{{ section.id }}"
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -400,7 +400,7 @@
           {{ media.preview_image | image_url: width:350  | image_tag:
             loading: lazy,
             sizes: sizes,
-            widths: '200, 250, 300'
+            widths: '200, 250, 300 , 320'
           }}
         
         </div>  
