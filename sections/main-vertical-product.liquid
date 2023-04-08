@@ -397,10 +397,10 @@
       {%- for media in product.media -%}
         <div class="swiper-slide"> 
         
-          {{ media.preview_image | image_url: width:400  | image_tag:
+          {{ media.preview_image | image_url: width:370  | image_tag:
             loading: lazy,
             sizes: sizes,
-            widths: '200, 250, 300 , 350 ,400'
+            widths: '200, 250, 300 , 350 ,370'
           }}
         
         </div>  
