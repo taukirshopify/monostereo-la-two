@@ -2,3 +2,7 @@
 .product__title > h1 {
     font-size: calc(var(--font-heading-scale) * 2rem) !important;
 }
+
+.footer-block__newsletter {
+  max-width: 450px;
+}
