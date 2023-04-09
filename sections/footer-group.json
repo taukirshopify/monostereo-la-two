@@ -17,7 +17,7 @@
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "main-menu"
+            "menu": "footer"
           }
         },
         "ff5e5929-6fa0-4ae7-812e-35fabd2ec7be": {
@@ -36,7 +36,7 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "newsletter_enable": false,
+        "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
         "show_social": true,
