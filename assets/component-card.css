@@ -777,4 +777,8 @@
   .template-search .product-card.rhombus .card-content__bottom{
     transform: rotate(-45deg) translate(70%,120%);
   }
+
+  .template-search .product-card.hexagon .card-content__bottom{
+    transform: rotate(28.5deg) translate(-50px,-80%);
+  }
 }
