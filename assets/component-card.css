@@ -748,3 +748,8 @@
     width: fit-content;
   }
 }
+
+.template-search .product-grid .grid__item.hexagon{
+  flex: 0 0 25%;
+  max-width: unset;
+}
