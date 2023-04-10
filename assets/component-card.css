@@ -773,4 +773,8 @@
     max-width: unset;
     flex: 0 0 calc( 50% - 30px);
   }  
+
+  .template-search .product-card.rhombus .card-content__bottom{
+    transform: rotate(-45deg) translate(70%,120%);
+  }
 }
