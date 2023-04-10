@@ -763,6 +763,10 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .template-search .product-grid {
+    display: flex;  
+  }
+  
   .template-search .product-grid .grid__item{
     width: unset;
     max-width: unset;
