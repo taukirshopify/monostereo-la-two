@@ -761,3 +761,11 @@
 .template-search .product-card.rhombus .card-content__bottom{
   transform: rotate(-45deg) translate(40%,20%);
 }
+
+@media screen and (max-width: 1080px) {
+  .template-search .product-grid .grid__item{
+    width: unset;
+    max-width: unset;
+    flex: 0 0 calc( 50% - 30px);
+  }  
+}
