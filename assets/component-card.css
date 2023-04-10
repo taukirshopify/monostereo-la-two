@@ -533,7 +533,7 @@
 
 .product-card.hexagon .card-content__bottom{
   padding: 0;
-  transform: rotate(28.5deg) translate(-50px,-210%);
+  transform: rotate(28.5deg) translate(-50px,-180%);
   width: fit-content;
   min-width: 250px;
   text-align: center;
