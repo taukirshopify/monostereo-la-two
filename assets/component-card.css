@@ -782,3 +782,10 @@
     transform: rotate(28.5deg) translate(-50px,-80%);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .template-search .product-grid .grid__item, 
+  .template-search .product-grid .grid__item.hexagon{
+    flex: 0 0 100%;
+  }
+}
