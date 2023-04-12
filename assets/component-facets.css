@@ -111,6 +111,10 @@
   padding-right: 1.75rem;
 }
 
+.mobile-facets__open-label {
+    font-size: 1.8rem;
+}
+
 .facet-filters__sort + .icon-caret {
   right: 0;
 }
