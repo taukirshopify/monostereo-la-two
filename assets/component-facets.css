@@ -188,7 +188,7 @@
 .facets__heading {
   display: block;
   color: rgba(var(--color-foreground), 0.85);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin: -1.5rem 2rem 0 0;
 }
 
@@ -202,7 +202,7 @@
 
 .facets__summary {
   color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding: 0 1.75rem 0 0;
   margin-bottom: 1.5rem;
 }
