@@ -24,7 +24,7 @@
         "7b78b7b3-9af2-42b5-a9f7-f2ff5f1ad2ba": {
           "type": "menu-item",
           "settings": {
-            "url": "shopify://collections/clothing-1",
+            "url": "shopify://collections/clothing",
             "title": "Accessories"
           }
         },
