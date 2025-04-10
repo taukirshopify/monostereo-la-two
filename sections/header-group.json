@@ -38,7 +38,7 @@
         "f061f63b-ea69-43d0-bf6c-5ec0402bfa3b": {
           "type": "menu-item",
           "settings": {
-            "url": "shopify://collections/accessories",
+            "url": "shopify://collections/objects",
             "title": "Object"
           }
         }
